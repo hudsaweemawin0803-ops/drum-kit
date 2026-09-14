@@ -1,0 +1,70 @@
+/* Homework 2: เปลี่ยนภาพ background ตรง selector html */
+html {
+  font-size: 10px;
+  background: url("https://st2.depositphotos.com/1001941/6787/v/450/depositphotos_67876263-stock-illustration-drum-set-with-neon-effect.jpg");
+  background-size: cover;
+  background-position: center;
+}
+ 
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+ 
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+ 
+/* Homework 1: เปลี่ยนสี border, color, background, text-shadow ของ .key */
+.key {
+  width: 20vw;
+  max-width: 8rem;
+  margin: 0.5rem;
+  border: 0.4rem solid #ff007f; /* เปลี่ยนขอบเป็นสี Neon Pink */
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  transition: all 0.07s ease;
+  text-align: center;
+  color: #ffffff; /* เปลี่ยนสีข้อความหลักเป็นสีขาวบริสุทธิ์ */
+  background: rgba(15, 5, 29, 0.7); /* เปลี่ยนพื้นหลังเป็นม่วงเข้มโปร่งแสง */
+  text-shadow: 0 0 0.5rem #ff007f; /* เปลี่ยนเงาข้อความเป็นสีชมพู */
+  user-select: none;
+}
+ 
+.letter {
+  display: block;
+  font-size: 4rem;
+}
+ 
+/* Homework 1: เปลี่ยนสีข้อความชื่อเสียง (.sound) */
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #00f3ff; /* เปลี่ยนสีข้อความเสียงเป็น Neon Cyan */
+}
+ 
+/* Homework 1: เปลี่ยนสี border-color และ box-shadow ตอนกดเล่น (.playing) */
+.playing {
+  transform: scale(1.1);
+  border-color: #00f3ff; /* เปลี่ยนขอบตอนกดเป็น Neon Cyan */
+  box-shadow: 0 0 1.5rem #00f3ff; /* เปลี่ยนแสงเรืองแสงตอนกดเป็น Neon Cyan */
+}
+ 
+@media (max-width: 480px) {
+  .key .letter {
+    font-size: 3rem;
+  }
+  .key {
+    font-size: 1.2rem;
+    padding: 0.8rem 0.4rem;
+  }
+}
+ 
